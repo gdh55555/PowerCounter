@@ -174,18 +174,18 @@ public class CPU extends PowerComponent {
 
 
     /* This is the function that is responsible for predicting the cpu frequency
-   * state of the individual uid as though it were the only thing running.  It
-   * simply is finding the lowest frequency that keeps the cpu usage under
-   * 70% assuming there is a linear relationship to the cpu utilization at
-   * different frequencies.
-   */
+     * state of the individual uid as though it were the only thing running.  It
+     * simply is finding the lowest frequency that keeps the cpu usage under
+     * 70% assuming there is a linear relationship to the cpu utilization at
+     * different frequencies.
+     */
     private void predictAppUidState(CpuData uidData, double usrPerc,
                                     double sysPerc, double freq) {
         double[] freqs = constants.cpuFreqs();
         if (usrPerc + sysPerc < 1e-6) {
-      /* Don't waste time with the binary search if there is no utilization
-       * which will be the case a lot.
-       */
+          /* Don't waste time with the binary search if there is no utilization
+           * which will be the case a lot.
+           */
             uidData.init(sysPerc, usrPerc, freqs[0]);
             return;
         }
@@ -204,7 +204,7 @@ public class CPU extends PowerComponent {
         uidData.init(sysPerc * freq / freqs[lo], usrPerc * freq / freqs[lo],
                 freqs[lo]);
     }
-    
+
     @Override
     public String getComponentName() {
         return "CPU";
