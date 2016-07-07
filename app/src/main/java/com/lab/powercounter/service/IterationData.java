@@ -39,7 +39,9 @@ public class IterationData {
         addUidPowerData(SystemInfo.AID_ALL, power);
     }
 
-    public void addUidPowerData(int uid, PowerData power) {
+    public void
+
+    addUidPowerData(int uid, PowerData power) {
         uidPower.put(uid, power);
     }
 
