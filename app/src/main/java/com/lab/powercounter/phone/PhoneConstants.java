@@ -91,37 +91,37 @@ public interface PhoneConstants {
 
     /* Gives the name of the 3G interface for this phone.
      */
-    public String threegInterface();
+    public String cellularInterface();
 
     /* Gives the power consumed while the 3G interface is in the idle state.
      */
-    public double threegIdlePower(String oper);
+    public double cellularIdlePower(String oper);
 
     /* Gives the power consumed while the 3G interface is in the FACH state.
      */
-    public double threegFachPower(String oper);
+    public double cellularFachPower(String oper);
 
     /* Gives the power consumed while the 3G interface is in the DCH state.
      */
-    public double threegDchPower(String oper);
+    public double cellularDchPower(String oper);
 
     /* Gives the number of bytes in the uplink queue.
      */
-    public int threegUplinkQueue(String oper);
+    public int cellularUplinkQueue(String oper);
 
     /* Gives the number of bytes in the downlink queue.
      */
-    public int threegDownlinkQueue(String oper);
+    public int cellularDownlinkQueue(String oper);
 
     /* Gives the time in seconds that the 3G interface stays idle in the DCH state
      * before transitioning to the FACH state.
      */
-    public int threegDchFachDelay(String oper);
+    public int cellularDchFachDelay(String oper);
 
     /* Gives the time in seconds that the 3G interface stays idle in the FACH
      * state before transitioning to the IDLE state.
      */
-    public int threegFachIdleDelay(String oper);
+    public int cellularFachIdleDelay(String oper);
 
     /* Gives the power consumed by each of the sensors.  Should have the same size
      * as Sensors.MAX_SENSORS.

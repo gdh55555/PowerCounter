@@ -107,7 +107,7 @@ public class Cellular extends PowerComponent {
         telephonyManager = (TelephonyManager) context.getSystemService(
                 Context.TELEPHONY_SERVICE);
 
-        String interfaceName = phoneConstants.threegInterface();
+        String interfaceName = phoneConstants.cellularInterface();
         cellularState = new CellularStateKeeper();
         uidStates = new SparseArray<>();
         transPacketsFile = "/sys/class/net/" +
@@ -154,10 +154,10 @@ public class Cellular extends PowerComponent {
 
         if (oper == null) {
             oper = telephonyManager.getNetworkOperatorName();
-            dchFachDelay = phoneConstants.threegDchFachDelay(oper);
-            fachIdleDelay = phoneConstants.threegFachIdleDelay(oper);
-            uplinkQueueSize = phoneConstants.threegUplinkQueue(oper);
-            downlinkQueueSize = phoneConstants.threegDownlinkQueue(oper);
+            dchFachDelay = phoneConstants.cellularDchFachDelay(oper);
+            fachIdleDelay = phoneConstants.cellularFachIdleDelay(oper);
+            uplinkQueueSize = phoneConstants.cellularUplinkQueue(oper);
+            downlinkQueueSize = phoneConstants.cellularDownlinkQueue(oper);
         }
         long transmitPackets;
         long receivePackets;
