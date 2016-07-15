@@ -10,6 +10,7 @@ import android.util.Log;
 
 import com.lab.powercounter.service.IterationData;
 import com.lab.powercounter.service.PowerData;
+import com.lab.powercounter.util.ForegroundDetector;
 import com.lab.powercounter.util.Recycler;
 import com.lab.powercounter.util.SystemInfo;
 

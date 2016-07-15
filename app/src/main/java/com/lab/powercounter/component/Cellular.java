@@ -10,6 +10,7 @@ import android.util.SparseArray;
 import com.lab.powercounter.phone.PhoneConstants;
 import com.lab.powercounter.service.IterationData;
 import com.lab.powercounter.service.PowerData;
+import com.lab.powercounter.service.PowerEstimator;
 import com.lab.powercounter.util.Recycler;
 import com.lab.powercounter.util.SystemInfo;
 
